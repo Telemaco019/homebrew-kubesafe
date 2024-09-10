@@ -10,7 +10,7 @@ class Kubesafe < Formula
   on_macos do
     on_intel do
       url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.0/kubesafe_Darwin_x86_64.tar.gz"
-      sha256 "96c27e0653ff409ed0c2673edb1689d180535f317047efda4ff7686f90c43762"
+      sha256 "0276b9851b088a478901d5517c011483bef4931e53e15a1986fb1462bd07c4a9"
 
       def install
         bin.install "kubesafe"
@@ -18,7 +18,7 @@ class Kubesafe < Formula
     end
     on_arm do
       url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.0/kubesafe_Darwin_arm64.tar.gz"
-      sha256 "c5aa480d01325e1f48c7ec711e7d331f9233b607fdc5d78efe4304c1144f83b1"
+      sha256 "133deb1c797326595dd6c738fc2ee0609a9231b82f9d9f55e3c7cee95ebb06c4"
 
       def install
         bin.install "kubesafe"
@@ -30,7 +30,7 @@ class Kubesafe < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.0/kubesafe_Linux_x86_64.tar.gz"
-        sha256 "c637130538cb2783baa83a9524d82e77a685cac0719a7ac0f26001832409b231"
+        sha256 "c98abaf5b9f12e933d9bf25883805fb65922ee85bbe31cb4da15321181d409d8"
 
         def install
           bin.install "kubesafe"
@@ -40,7 +40,7 @@ class Kubesafe < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.0/kubesafe_Linux_arm64.tar.gz"
-        sha256 "35abc04208e4426c928848a210aef0157fd25c9499d94e0d209781cde7feacf9"
+        sha256 "0022301b57a9736e7a3dddbd07f34be742463398ff70b514841b5ea5fc3c6591"
 
         def install
           bin.install "kubesafe"
