@@ -5,20 +5,20 @@
 class Kubesafe < Formula
   desc "Safely manage multiple Kubernetes clusters by defining safe contexts and protected commands."
   homepage "https://github.com/Telemaco019/kubesafe"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.0/kubesafe_Darwin_x86_64.tar.gz"
-      sha256 "0276b9851b088a478901d5517c011483bef4931e53e15a1986fb1462bd07c4a9"
+      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.1/kubesafe_Darwin_x86_64.tar.gz"
+      sha256 "1de1e8fc24bc14112986d32ee535735fa2ca192dde24ade16461841a317d998f"
 
       def install
         bin.install "kubesafe"
       end
     end
     on_arm do
-      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.0/kubesafe_Darwin_arm64.tar.gz"
-      sha256 "133deb1c797326595dd6c738fc2ee0609a9231b82f9d9f55e3c7cee95ebb06c4"
+      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.1/kubesafe_Darwin_arm64.tar.gz"
+      sha256 "16f46190c74932228ceba6655f3622c868206cad807e57f64d1c7bb780abf5bf"
 
       def install
         bin.install "kubesafe"
@@ -29,8 +29,8 @@ class Kubesafe < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.0/kubesafe_Linux_x86_64.tar.gz"
-        sha256 "c98abaf5b9f12e933d9bf25883805fb65922ee85bbe31cb4da15321181d409d8"
+        url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.1/kubesafe_Linux_x86_64.tar.gz"
+        sha256 "e2358274a4d7f9339ca323e559d53a37799b3fbffb54d8522ab48ab3b4f77ff7"
 
         def install
           bin.install "kubesafe"
@@ -39,8 +39,8 @@ class Kubesafe < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.0/kubesafe_Linux_arm64.tar.gz"
-        sha256 "0022301b57a9736e7a3dddbd07f34be742463398ff70b514841b5ea5fc3c6591"
+        url "https://github.com/Telemaco019/kubesafe/releases/download/v0.1.1/kubesafe_Linux_arm64.tar.gz"
+        sha256 "cbf149dab8daa91d13502b4c950ca561e41061657167bab07fe5fd8f717dd698"
 
         def install
           bin.install "kubesafe"
