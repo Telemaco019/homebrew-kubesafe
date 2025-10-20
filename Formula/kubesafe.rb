@@ -5,20 +5,20 @@
 class Kubesafe < Formula
   desc "Safely manage multiple Kubernetes clusters by defining safe contexts and protected commands."
   homepage "https://github.com/Telemaco019/kubesafe"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.3.1/kubesafe_Darwin_x86_64.tar.gz"
-      sha256 "a959ca6a29d21975867943f3921b50656515fd5ea63b194248e64eaa1e579523"
+      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.3.2/kubesafe_Darwin_x86_64.tar.gz"
+      sha256 "9f372bb25a63bbd100be4cd14c1fb719d308a38cd4c71f7e5607fd73c42e4c65"
 
       def install
         bin.install "kubesafe"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.3.1/kubesafe_Darwin_arm64.tar.gz"
-      sha256 "1f94b3c8533a5b4238dd604fde64ce905b66d76df6a564daf9376154862016b0"
+      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.3.2/kubesafe_Darwin_arm64.tar.gz"
+      sha256 "5a991933092822f0d3c17214304ed74002523886d768bc5dc39bb78f909dc49c"
 
       def install
         bin.install "kubesafe"
@@ -27,24 +27,18 @@ class Kubesafe < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/Telemaco019/kubesafe/releases/download/v0.3.1/kubesafe_Linux_x86_64.tar.gz"
-        sha256 "dba87f5d2f02f8b21832fbcab029e024f1aced076a29d32a1aedb59d20ff22c1"
-
-        def install
-          bin.install "kubesafe"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.3.2/kubesafe_Linux_x86_64.tar.gz"
+      sha256 "e1596817c21bad2e17bd15aea20c3dd40f282543fd76d42cfdcd122f56c13e7d"
+      def install
+        bin.install "kubesafe"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/Telemaco019/kubesafe/releases/download/v0.3.1/kubesafe_Linux_arm64.tar.gz"
-        sha256 "723e4f133b63b2d0847bb5cf17e72d1baff91c8777bd8fc7f77793dcbaec4346"
-
-        def install
-          bin.install "kubesafe"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Telemaco019/kubesafe/releases/download/v0.3.2/kubesafe_Linux_arm64.tar.gz"
+      sha256 "69e63feba2c32078f4ff3467f2824498f0932f7e8d62ee3a42d2ecbcdbb3b4c7"
+      def install
+        bin.install "kubesafe"
       end
     end
   end
